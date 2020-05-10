@@ -16,4 +16,3 @@ alias gcn='git commit --no-verify -m'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
-

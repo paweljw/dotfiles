@@ -1,0 +1,11 @@
+#!/usr/bin/zsh
+
+cd ~/housegrimson.rocks; \
+echo "* $1 $2" >> pjw/ReadingList.md; \
+git checkout master; \
+git add .; \
+git commit -m "Updated readinglist @ $(date)";
+git pull --rebase;
+git push origin master;
+git checkout -;
+cd -;

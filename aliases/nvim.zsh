@@ -1,0 +1,3 @@
+# NeoVim
+
+alias nv="nvim"

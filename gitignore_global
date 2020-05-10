@@ -1,0 +1,15 @@
+*~
+.DS_Store
+
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+Session.vim
+.tags
+.tags1
+.tags_sorted_by_file
+tags
+.vscode
+.solargraph.yml
+.idea

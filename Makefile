@@ -45,6 +45,12 @@ regolith: ~/.config/regolith
 ~/bin/rdl:
 	ln -fs ~/.dotfiles/rdl ~/bin/rdl
 
-custom_scripts: ~/bin/rdl
+~/bin/water:
+	ln -fs ~/.dotfiles/water ~/bin/water
+
+~/bin/thirsty:
+	ln -fs ~/.rbenv/shims/thirsty ~/bin/thirsty
+
+custom_scripts: ~/bin/rdl ~/bin/water ~/bin/thirsty
 
 all: zshrc tmux git gem alacritty nvim regolith custom_scripts

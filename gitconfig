@@ -1,22 +1,25 @@
 [core]
-	excludesfile = /home/pjw/.gitignore_global
-	pager = diff-so-fancy | less --tabs=2 -RFX
-	editor = vim
+  excludesfile = /home/pjw/.gitignore_global
+  pager = diff-so-fancy | less --tabs=2 -RFX
+  editor = vim
+
 [user]
-	name = Paweł J. Wal
-	email = pawel.wal@codesthq.com
+  name = Paweł J. Wal
+  email = p@paweljw.al
+
 [push]
-	default = simple
+  default = simple
+
 [pager]
   diff = diff-so-fancy | less --tabs=2 -RFX --pattern '^(Date|added|deleted|modified): '
 
 [alias]
-	branches = branch -avvl
+  branches = branch -avvl
   br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
-	cr = "!sh -c 'git fetch origin pull/$0/head:pr/$0 && git checkout pr/$0'"
+  cr = "!sh -c 'git fetch origin pull/$0/head:pr/$0 && git checkout pr/$0'"
   dumpcr = "!sh -c 'git branch -l | grep pr/ | awk \"{print $1}\" | xargs git branch -D'"
 
-	drzewo = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s' --graph
+  drzewo = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s' --graph
   duzedrzewo = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s%n' --graph --name-status
   komity = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=iso
 
@@ -28,7 +31,7 @@
   ktotam = !sh -c 'git shortlog HEAD..origin/$0'
   ktotammistrzu = !sh -c 'git shortlog HEAD..origin/master'
 
-	pojebalosie = reset --hard
+  pojebalosie = reset --hard
   ktonajebal = blame
 
   cojestkurwa = diff
@@ -48,14 +51,16 @@
   dalej = push
   sorry = commit --amend
   acomitam = push -f
-	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
+  yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
 
 [help]
   autocorrect = 1 #fucking magic!
+
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
 [sequence]
-	editor = interactive-rebase-tool
+  editor = interactive-rebase-tool

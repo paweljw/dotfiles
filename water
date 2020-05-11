@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "<span color='#E6E1CF' font_desc='JetBrains Mono Medium 12'>💧 $(/home/pjw/.rbenv/shims/thirsty today)</span>"

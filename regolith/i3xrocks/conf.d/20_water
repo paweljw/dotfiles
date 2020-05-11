@@ -1,0 +1,4 @@
+
+[water]
+interval=10
+command=/home/pjw/bin/water

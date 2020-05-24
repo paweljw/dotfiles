@@ -1,0 +1,8 @@
+#!/usr/bin/zsh
+
+cd ~/projects/housegrimson.rocks
+git checkout master
+git pull --rebase
+git push origin master
+git checkout -
+cd -

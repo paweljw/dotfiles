@@ -1,11 +1,9 @@
 #!/usr/bin/zsh
 
 cd ~/projects/housegrimson.rocks
-echo "* [$1]($1) $2" >> pjw/ReadingList.md
 git checkout master
+echo "* [$1]($1) $2" >> pjw/ReadingList.md
 git add .
 git commit -m "Updated readinglist @ $(date)"
-git pull --rebase
-git push origin master
 git checkout -
 cd -

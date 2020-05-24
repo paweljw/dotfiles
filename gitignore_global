@@ -9,7 +9,7 @@ Session.vim
 .tags
 .tags1
 .tags_sorted_by_file
-tags
+/tags
 .vscode
 .solargraph.yml
 .idea

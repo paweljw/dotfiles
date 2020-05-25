@@ -3,31 +3,24 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'cohama/lexima.vim'
 Plug 'rking/ag.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-"Plug 'benekastah/neomake'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'fishbullet/deoplete-ruby'
-"Plug 'uplus/deoplete-solargraph'
 Plug 'alvan/vim-closetag'
-Plug 'Raimondi/delimitMate'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 Plug 'srcery-colors/srcery-vim'
 Plug 'fatih/vim-go'
-"Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'crusoexia/vim-monokai'
 Plug 'juanedi/predawn.vim'
 Plug 'sirtaj/vim-openscad'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chriskempson/base16-vim'
-
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 "let g:deoplete#enable_at_startup = 1
@@ -101,12 +94,18 @@ set colorcolumn=125
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? coc#_select_confirm() :
+"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
+" let g:coc_snippet_next = '<tab>'
 
 let base16colorspace=256
 set termguicolors     " enable true colors support

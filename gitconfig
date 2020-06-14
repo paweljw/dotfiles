@@ -6,6 +6,10 @@
 [user]
   name = Paweł J. Wal
   email = p@paweljw.al
+  signingkey = 8D457810D63B0B17A9216BC2CA80CD1B175A3E60
+
+[commit]
+  gpgsign = true
 
 [push]
   default = simple

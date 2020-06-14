@@ -51,6 +51,8 @@ bindsym $mod+space exec $i3-wm.program.launcher.app
 set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $rofiTheme
 bindsym $mod+Shift+space exec $i3-wm.program.launcher.cmd
 
+bindsym $mod+e exec rofimoji -p
+
 ## Navigate // Window by Name // <><Ctrl> Space ##
 set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
 bindsym $mod+Ctrl+space exec $i3-wm.program.launcher.window
@@ -470,7 +472,7 @@ set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/
 exec --no-startup-id $i3-wm.program.compositor
 
 # Start Rofication for notifications
-set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
+set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/dunst
 exec --no-startup-id $i3-wm.program.notifications
 
 # Launch first time user experience script

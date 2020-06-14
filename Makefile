@@ -56,4 +56,9 @@ regolith: ~/.config/regolith
 
 custom_scripts: ~/bin/rdl ~/bin/water ~/bin/thirsty ~/bin/rdp
 
-all: zshrc tmux git gem alacritty nvim regolith custom_scripts
+~/.config/dunst:
+	ln -fs ~/.dotfiles/dunst ~/.config/dunst
+
+dunst: ~/.config/dunst
+
+all: zshrc tmux git gem alacritty nvim regolith custom_scripts dunst

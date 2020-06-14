@@ -13,11 +13,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'alvan/vim-closetag'
 Plug 'sheerun/vim-polyglot'
-" Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'sirtaj/vim-openscad'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chriskempson/base16-vim'
+Plug 'vim-crystal/vim-crystal'
 call plug#end()
 
 syntax on
@@ -86,8 +86,10 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 let base16colorspace=256
 set termguicolors     " enable true colors support
-set background=dark
-colorscheme base16-onedark
+set background=light
+" colorscheme base16-onedark
+colorscheme base16-solarized-light
+
 let g:airline_theme='bubblegum'
 
 set guifont=FiraCode\ Nerd\ Font:h22

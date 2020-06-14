@@ -17,46 +17,6 @@
 [pager]
   diff = diff-so-fancy | less --tabs=2 -RFX --pattern '^(Date|added|deleted|modified): '
 
-[alias]
-  branches = branch -avvl
-  br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
-  cr = "!sh -c 'git fetch origin pull/$0/head:pr/$0 && git checkout pr/$0'"
-  dumpcr = "!sh -c 'git branch -l | grep pr/ | awk \"{print $1}\" | xargs git branch -D'"
-
-  drzewo = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s' --graph
-  duzedrzewo = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s%n' --graph --name-status
-  komity = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=iso
-
-  ktoto = "!sh -c 'git log -i -1 --pretty=\"format::%an <%ae>\n\" --author=\"$1\"' -"
-  coto = show -s --pretty='tformat::%h (%s, %ad)' --date=short
-
-  cotam = !sh -c 'git fetch' && git log --oneline HEAD..origin/$1
-  cotammistrzu = !sh -c 'git fetch' && git log --oneline HEAD..origin/master
-  ktotam = !sh -c 'git shortlog HEAD..origin/$0'
-  ktotammistrzu = !sh -c 'git shortlog HEAD..origin/master'
-
-  pojebalosie = reset --hard
-  ktonajebal = blame
-
-  cojestkurwa = diff
-  nabok = stash
-  zboku = stash apply
-  sprzataj = clean -f
-  sprzatajwszystko = !sh -c 'git clean -x' && git reset --hard
-
-  drop = !sh -c 'git stash && git stash drop'
-
-  palisie = !sh -c 'git add . && git commit -m "wip"'
-
-  niepalisie = !sh -c 'git reset --soft HEAD~1 && git reset'
-
-  dodaj = add
-  tak = commit
-  dalej = push
-  sorry = commit --amend
-  acomitam = push -f
-  yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
-
 [help]
   autocorrect = 1 #fucking magic!
 
@@ -68,3 +28,17 @@
 
 [sequence]
   editor = interactive-rebase-tool
+
+[alias]
+  br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+
+  cr = "!sh -c 'git fetch origin pull/$0/head:pr/$0 && git checkout pr/$0'"
+  removecr = "!sh -c 'git branch -l | grep pr/ | awk \"{print $1}\" | xargs git branch -D'"
+
+  pojebalosie = reset --hard
+  ktonajebal = blame
+
+  drop = !sh -c 'git stash && git stash drop'
+
+  sorry = commit --amend
+  acomitam = push -f

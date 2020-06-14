@@ -20,5 +20,6 @@ alias pbpaste='xclip -selection clipboard -o'
 alias td='echo $(date +%Y-%m-%d)'
 
 hash -d p=$HOME/projects
+hash -d pl=$HOME/projects/paladin
 hash -d bp=$HOME/projects/paweljw.github.io/hugo/content/post
 hash -d hp=$HOME/projects/housegrimson.rocks/pjw

@@ -27,7 +27,11 @@ glx-no-stencil = true;
 # but a 20% increase when only 1/4 is.
 # My tests on nouveau show terrible slowdown.
 # Useful with --glx-swap-method, as well.
-glx-copy-from-front = false;
+# glx-copy-from-front = true;
+
+glx-swap-method = 2;
+# xrender-sync = true;
+xrender-sync-fence = true;
 
 # GLX backend: Use MESA_copy_sub_buffer to do partial screen update.
 # My tests on nouveau shows a 200% performance boost when only 1/4 of the screen is updated.
@@ -80,7 +84,7 @@ shadow-exclude = [
     "name *= 'Chromium'",
     "name *= 'Chrome'",
     "name *= 'wrapper-2.0'",
-    "class_g = 'Firefox' && argb",
+    "class_g = 'Firefox'",
     "class_g = 'Conky'",
     "class_g = 'Kupfer'",
     "class_g = 'Synapse'",
@@ -103,7 +107,7 @@ frame-opacity = 1;
 inactive-opacity-override = false;
 
 # Dim inactive windows. (0.0 - 1.0)
-inactive-dim = 0.03;
+inactive-dim = 0.00;
 # Do not let dimness adjust based on window opacity.
 inactive-dim-fixed = true;
 # Blur background of transparent windows. Bad performance with X Render backend. GLX backend is preferred.
@@ -166,12 +170,12 @@ vsync = true;
 
 # Enable DBE painting mode, intended to use with VSync to (hopefully) eliminate tearing.
 # Reported to have no effect, though.
-dbe = false;
+dbe = true;
 
 # Limit compton to repaint at most once every 1 / refresh_rate second to boost performance.
 # This should not be used with --vsync drm/opengl/opengl-oml as they essentially does --sw-opti's job already,
 # unless you wish to specify a lower refresh rate than the actual value.
-sw-opti = false;
+sw-opti = true;
 
 # Unredirect all windows if a full-screen opaque window is detected, to maximize performance for full-screen windows, like games.
 # Known to cause flickering when redirecting/unredirecting windows.
@@ -221,3 +225,7 @@ wintypes:
         fade = false;
     }
 };
+
+opacity-rule = [
+    "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];

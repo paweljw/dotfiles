@@ -96,3 +96,5 @@ set guifont=FiraCode\ Nerd\ Font:h22
 
 let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
+
+:nnoremap gz :!zeal "<cword>"&<CR><CR>

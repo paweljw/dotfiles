@@ -16,4 +16,4 @@ ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY=" ±"
 
-PROMPT='[%{$fg[blue]%}%2~%{$reset_color%}$(git_status)%{$reset_color%}] '
+PROMPT='[%{$fg[blue]%}%2~%{$reset_color%}$(git_status)%{$reset_color%} %{$fg[red]%}$(rbenv version | cut -d" " -f1)%{$reset_color%}] '

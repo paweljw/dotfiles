@@ -2,8 +2,8 @@
 
 [user]
   name = Paweł J. Wal
-  email = p@paweljw.al # TODO
-  signingkey = 8D457810D63B0B17A9216BC2CA80CD1B175A3E60 # TODO
+  email = pawel.wal@paladinsoftware.com
+  signingkey = E03B9EFFD2CC16AE54C7E08C76EC11F7958213DC # TODO
 
 [commit]
   gpgsign = true

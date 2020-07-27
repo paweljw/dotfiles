@@ -1,5 +1,6 @@
 font:
-  size: 12
+  size: 13
+  family: 'Fira Code'
 
 colors:
   # Default colors

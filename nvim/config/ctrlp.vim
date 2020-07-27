@@ -1,5 +1,7 @@
 " CtrlP stuff
-nnoremap <Leader>o :CtrlP<CR>
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>/ :CtrlPLine<CR>
 
 let g:ctrlp_use_caching = 0
 if executable('/usr/local/bin/rg')

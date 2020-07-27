@@ -18,6 +18,7 @@ Plug 'sirtaj/vim-openscad'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chriskempson/base16-vim'
 Plug 'vim-crystal/vim-crystal'
+Plug 'juanedi/predawn.vim'
 call plug#end()
 
 syntax on
@@ -79,7 +80,7 @@ let g:vim_markdown_conceal = 0
 " Autoclosing HTML tags
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.vue"
 
-set colorcolumn=125
+set colorcolumn=90
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -89,8 +90,9 @@ set termguicolors     " enable true colors support
 set background=light
 " colorscheme base16-onedark
 colorscheme base16-solarized-light
+" colorscheme predawn
 
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized'
 
 set guifont=FiraCode\ Nerd\ Font:h22
 

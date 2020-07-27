@@ -498,6 +498,7 @@ assign [class="Slack"] workspace $ws2
 assign [class="TelegramDesktop"] workspace $ws2
 assign [class="Evolution"] workspace $ws4
 assign [class="neovide"] workspace $ws5
+assign [class="Spotify"] workspace $ws8
 
 # User programs from Xresources
 # To use, define an Xresource key i3-wm.program.[1-3] with the value of the program to launch.

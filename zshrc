@@ -35,3 +35,5 @@ IDF_PATH="$HOME/esp/esp-idf"
 . $HOME/.asdf/completions/asdf.bash
 export SCREENDIR=$HOME/.screen
 export GOPATH=$HOME/go
+
+cbonsai -p -m4 -L60

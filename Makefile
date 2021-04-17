@@ -61,4 +61,9 @@ custom_scripts: ~/bin/rdl ~/bin/water ~/bin/thirsty ~/bin/rdp
 
 dunst: ~/.config/dunst
 
-all: zshrc tmux git gem alacritty nvim regolith custom_scripts dunst
+~/.doom.d:
+	ln -fs ~/.dotfiles/doom.d ~/.doom.d
+
+doomemacs: ~/.doom.d
+
+all: zshrc tmux git gem alacritty nvim regolith custom_scripts dunst doomemacs

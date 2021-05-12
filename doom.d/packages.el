@@ -62,3 +62,4 @@
 
 (package! beancount :recipe (:host github :repo "beancount/beancount-mode"))
 (package! visual-fill-column)
+(package! enh-ruby-mode)
